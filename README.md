@@ -17,12 +17,12 @@ The algorithm is inspired and adapted from:
 
 The Algorithm is based on Sentinel-2 Level-2A Surface Reflectance product. The algorithm for Cloud and Snow detection are set as follow:
 
-***Cloud Mask:***  [MSK_CLDPRB >= 90%] OR [(MSK_CLDPRB >= 50%) AND (B8 >= 0.3)] OR  [(MSK_CLDPRB >= 20%) AND (B8 >= 0.9)]
+- ***Cloud Mask:***  [MSK_CLDPRB >= 90%] OR [(MSK_CLDPRB >= 50%) AND (B8 >= 0.3)] OR  [(MSK_CLDPRB >= 20%) AND (B8 >= 0.9)]
 
 with “MSK_CLDPRB” is the Cloud Probability band and “B8” is the Reflectance in the Near-infrared band (at 0.86 μm).
 
 
-***Snow Mask:*** (NDSI >= 0.3) AND (B4 >= 0.14)
+- ***Snow Mask:*** (NDSI >= 0.3) AND (B4 >= 0.14)
 
 with “NDSI” is the Normalized Difference Snow Index and “B4” is Reflectance in the Red  band (at 0.66 μm) . 
      NDSI = (B3 – B11) / (B3 + B11)
@@ -33,4 +33,7 @@ with “B3” is the Reflectance in Green band (at 0.55 μm) and “B11” is th
 - Sentinel-2 has a spatial resolution of 10 m which not suited to detect very fine details. The tool is intended to give an idea on the general Snow condition.
 - Sentinel-2 provides an image every 6 days BUT the tool will filter out images with more than 30% Cloud coverage and use the most recent and least cloudy image available.
 - If no images found at the selected dates the tool will throw the following message:
+![SE Image 3](img/noImages.png)
+- If your ROI covers more than one Sentinel-2, the tool will make a mosaic of the most recent images. This might result in a strange border effect.
+- Multiple ROIs cannot be selected on the tool. Users need to reset the App (press F5) and start again.
 

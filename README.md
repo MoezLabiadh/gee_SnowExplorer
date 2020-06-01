@@ -28,3 +28,9 @@ with “NDSI” is the Normalized Difference Snow Index and “B4” is Reflecta
      NDSI = (B3 – B11) / (B3 + B11)
 with “B3” is the Reflectance in Green band (at 0.55 μm) and “B11” is the Reflectance in the Shortwave infrared band (at 1.61 μm).
 
+## Assumptions & Considerations:
+
+- Sentinel-2 has a spatial resolution of 10 m which not suited to detect very fine details. The tool is intended to give an idea on the general Snow condition.
+- Sentinel-2 provides an image every 6 days BUT the tool will filter out images with more than 30% Cloud coverage and use the most recent and least cloudy image available.
+- If no images found at the selected dates the tool will throw the following message:
+

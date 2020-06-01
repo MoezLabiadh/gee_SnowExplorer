@@ -16,10 +16,14 @@ The algorithm is inspired and adapted from:
 ![SE Image 2](img/workflow.png)
 
 The Algorithm is based on Sentinel-2 Level-2A Surface Reflectance product. The algorithm for Cloud and Snow detection are set as follow:
-*Cloud Mask:  [MSK_CLDPRB >= 90%] OR [(MSK_CLDPRB >= 50%) AND (B8 >= 0.3)]                       OR  [(MSK_CLDPRB >= 20%) AND (B8 >= 0.9)]
+
+***Cloud Mask:***  [MSK_CLDPRB >= 90%] OR [(MSK_CLDPRB >= 50%) AND (B8 >= 0.3)] OR  [(MSK_CLDPRB >= 20%) AND (B8 >= 0.9)]
+
 with “MSK_CLDPRB” is the Cloud Probability band and “B8” is the Reflectance in the Near-infrared band (at 0.86 μm).
 
-*Snow Mask: (NDSI >= 0.3) AND (B4 >= 0.14)
+
+***Snow Mask:*** (NDSI >= 0.3) AND (B4 >= 0.14)
+
 with “NDSI” is the Normalized Difference Snow Index and “B4” is Reflectance in the Red  band (at 0.66 μm) . 
      NDSI = (B3 – B11) / (B3 + B11)
 with “B3” is the Reflectance in Green band (at 0.55 μm) and “B11” is the Reflectance in the Shortwave infrared band (at 1.61 μm).

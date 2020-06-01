@@ -6,4 +6,4 @@ SnowExplorer is a Google Earth Engine  based application for mapping snow on the
 
 
 The tool is accessible at this address: https://labiadhmoez.users.earthengine.app/view/snowexplorer
-	***Please note that the tool doesn’t work on Internet Explorer. Use Google Chrome or Firefox to access the tool.***
+***Please note that the tool doesn’t work on Internet Explorer. Use Google Chrome or Firefox to access the tool.***

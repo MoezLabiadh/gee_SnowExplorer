@@ -248,7 +248,7 @@ mapPanel.drawingTools().onDraw(function (geometry) {
   //Create the Snow Cover Extent (SCE) layer
 
   var SCE = mosaic.expression(
-      "((b('CloudMask') == 0 && (b('NDSI') >= 0.3) && (b('B4') >= 1000))) ? 2" +
+      "((b('CloudMask') == 0 && (b('NDSI') >= 0.3) && (b('B4') >= 1400))) ? 2" +
        ": (b('CloudMask') == 1) ? 1" +
         ": 0"
     ).rename ('SnowIndex').clip(AOI);
